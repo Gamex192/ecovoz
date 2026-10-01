@@ -1,0 +1,512 @@
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff5e4,
+            #eaf7ff
+        );
+
+    color: #1f2933;
+}
+
+
+/* =====================================
+   TOTEM
+===================================== */
+
+.totem {
+    width: 450px;
+
+    min-height: 850px;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.20);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.header {
+    background: #168b45;
+
+    color: white;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.logo {
+    width: 58px;
+    height: 58px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+}
+
+.header h1 {
+    font-size: 26px;
+}
+
+.header p {
+    font-size: 13px;
+
+    margin-top: 4px;
+
+    opacity: 0.9;
+}
+
+
+/* =====================================
+   TELAS
+===================================== */
+
+.screen {
+    display: none;
+
+    flex: 1;
+
+    padding: 28px;
+
+    overflow-y: auto;
+}
+
+.screen.active {
+    display: block;
+}
+
+
+/* =====================================
+   TELA INICIAL
+===================================== */
+
+.hero {
+    text-align: center;
+
+    padding-top: 50px;
+}
+
+.hero-icon {
+    font-size: 85px;
+
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 29px;
+
+    color: #14532d;
+
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* =====================================
+   TÍTULO DAS TELAS
+===================================== */
+
+.screen-title {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.screen-title h2 {
+    font-size: 24px;
+
+    color: #14532d;
+}
+
+.screen-title p {
+    color: #64748b;
+
+    margin-top: 7px;
+
+    font-size: 14px;
+}
+
+.back {
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #168b45;
+}
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+.btn {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    margin-top: 12px;
+}
+
+.btn-primary {
+    background: #168b45;
+
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #106b34;
+
+    transform: scale(1.01);
+}
+
+.btn-secondary {
+    background: #eef2f4;
+
+    color: #334155;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+
+/* =====================================
+   CARDS DE RESÍDUOS
+===================================== */
+
+.residuos-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+}
+
+.residuo-card {
+    border: 2px solid #e2e8f0;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 18px 10px;
+
+    min-height: 145px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    transition: 0.2s;
+}
+
+.residuo-card:hover {
+    border-color: #168b45;
+
+    background: #f1fff5;
+
+    transform: translateY(-3px);
+}
+
+.residuo-icon {
+    font-size: 43px;
+
+    margin-bottom: 9px;
+}
+
+.residuo-card strong {
+    color: #1e293b;
+
+    font-size: 17px;
+}
+
+.residuo-card small {
+    color: #64748b;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   RESULTADO
+===================================== */
+
+.result-container {
+    text-align: center;
+}
+
+.result-icon {
+    font-size: 60px;
+
+    display: block;
+
+    margin-bottom: 10px;
+}
+
+.result-label {
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #64748b;
+
+    letter-spacing: 1px;
+}
+
+.result-container h2 {
+    font-size: 31px;
+
+    color: #168b45;
+
+    margin-top: 8px;
+}
+
+
+/* =====================================
+   LIXEIRA
+===================================== */
+
+.lixeira {
+    width: 130px;
+
+    margin: 25px auto;
+
+    position: relative;
+}
+
+.lixeira-tampa {
+    width: 145px;
+
+    height: 17px;
+
+    border-radius: 8px;
+
+    margin-left: -8px;
+
+    background: #168b45;
+}
+
+.lixeira-corpo {
+    width: 110px;
+
+    height: 125px;
+
+    margin: auto;
+
+    border-radius: 0 0 15px 15px;
+
+    background: #168b45;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 52px;
+
+    box-shadow:
+        inset -8px 0 rgba(0, 0, 0, 0.08);
+}
+
+.lixeira-corpo span {
+    font-size: 50px;
+}
+
+
+/* =====================================
+   INFORMAÇÕES
+===================================== */
+
+.resultado-info {
+    background: #f8fafc;
+
+    padding: 18px;
+
+    border-radius: 17px;
+
+    margin-top: 10px;
+}
+
+.resultado-info h3 {
+    color: #1e293b;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.resultado-info p {
+    color: #64748b;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+/* =====================================
+   DICA
+===================================== */
+
+.dica {
+    display: flex;
+
+    gap: 12px;
+
+    text-align: left;
+
+    background: #fff8dc;
+
+    border: 1px solid #f4d35e;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-top: 15px;
+}
+
+.dica > span {
+    font-size: 25px;
+}
+
+.dica strong {
+    color: #765900;
+
+    font-size: 14px;
+}
+
+.dica p {
+    color: #665c3a;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    border-top: 1px solid #e5e7eb;
+
+    padding: 14px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 500px) {
+
+    body {
+        background: white;
+
+        align-items: stretch;
+    }
+
+    .totem {
+        width: 100%;
+
+        min-height: 100vh;
+
+        border-radius: 0;
+
+        box-shadow: none;
+    }
+
+    .screen {
+        padding: 22px;
+    }
+}

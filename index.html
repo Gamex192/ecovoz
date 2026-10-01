@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoTotem - Descarte Consciente</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="totem">
+
+        <!-- CABEÇALHO -->
+        <header class="header">
+
+            <div class="logo">
+                ♻️
+            </div>
+
+            <div>
+                <h1>EcoVoz</h1>
+                <p>Descarte consciente começa aqui</p>
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             TELA INICIAL
+        ========================== -->
+
+        <section id="home" class="screen active">
+
+            <div class="hero">
+
+                <div class="hero-icon">
+                    🌎
+                </div>
+
+                <h2>Vamos cuidar do nosso planeta?</h2>
+
+                <p>
+                    Descubra onde descartar corretamente cada tipo
+                    de resíduo e ajude a manter nosso ambiente mais limpo.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="mostrarTela('residuos')">
+
+                    COMEÇAR
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ESCOLHA DO RESÍDUO
+        ========================== -->
+
+        <section id="residuos" class="screen">
+
+            <div class="screen-title">
+
+                <span class="back" onclick="mostrarTela('home')">
+                    ←
+                </span>
+
+                <div>
+                    <h2>O que você deseja descartar?</h2>
+
+                    <p>
+                        Toque no material que você tem em mãos.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="residuos-grid">
+
+                <button
+                    class="residuo-card"
+                    onclick="mostrarResultado('papel')">
+
+                    <span class="residuo-icon">📄</span>
+
+                    <strong>Papel</strong>
+
+                    <small>
+                        Folhas, jornais e caixas
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="residuo-card"
+                    onclick="mostrarResultado('plastico')">
+
+                    <span class="residuo-icon">🥤</span>
+
+                    <strong>Plástico</strong>
+
+                    <small>
+                        Garrafas e embalagens
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="residuo-card"
+                    onclick="mostrarResultado('vidro')">
+
+                    <span class="residuo-icon">🍾</span>
+
+                    <strong>Vidro</strong>
+
+                    <small>
+                        Garrafas e potes
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="residuo-card"
+                    onclick="mostrarResultado('metal')">
+
+                    <span class="residuo-icon">🥫</span>
+
+                    <strong>Metal</strong>
+
+                    <small>
+                        Latas e objetos metálicos
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="residuo-card"
+                    onclick="mostrarResultado('organico')">
+
+                    <span class="residuo-icon">🍎</span>
+
+                    <strong>Orgânico</strong>
+
+                    <small>
+                        Restos de alimentos
+                    </small>
+
+                </button>
+
+                <button
+                    class="residuo-card"
+                    onclick="mostrarResultado('outros')">
+
+                    <span class="residuo-icon">🗑️</span>
+
+                    <strong>Outros</strong>
+
+                    <small>
+                        Resíduos não recicláveis
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESULTADO
+        ========================== -->
+
+        <section id="resultado" class="screen">
+
+            <div class="result-container">
+
+                <span id="resultadoIcon" class="result-icon">
+                    ♻️
+                </span>
+
+                <p class="result-label">
+                    ESTE RESÍDUO DEVE SER DESCARTADO NA
+                </p>
+
+                <h2 id="resultadoLixeira">
+                    Lixeira
+                </h2>
+
+
+                <!-- LIXEIRA -->
+
+                <div
+                    id="lixeira"
+                    class="lixeira">
+
+                    <div class="lixeira-tampa"></div>
+
+                    <div class="lixeira-corpo">
+
+                        <span id="lixeiraSimbolo">
+                            ♻
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="resultado-info">
+
+                    <h3 id="resultadoNome">
+                        Resíduo
+                    </h3>
+
+                    <p id="resultadoDescricao">
+                        Descrição do descarte.
+                    </p>
+
+                </div>
+
+
+                <!-- DICA EDUCATIVA -->
+
+                <div class="dica">
+
+                    <span>💡</span>
+
+                    <div>
+
+                        <strong>
+                            Você sabia?
+                        </strong>
+
+                        <p id="resultadoDica">
+                            Informação sobre reciclagem.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="btn btn-primary"
+                    onclick="mostrarTela('residuos')">
+
+                    DESCARTAR OUTRO RESÍDUO
+
+                </button>
+
+
+                <button
+                    class="btn btn-secondary"
+                    onclick="mostrarTela('home')">
+
+                    VOLTAR AO INÍCIO
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+
+        <footer>
+
+            <span>🌱</span>
+
+            Pequenas atitudes fazem a diferença.
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
